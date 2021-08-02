@@ -1,10 +1,10 @@
-<div *ngIf="cargando" class="alert alert-primary" role="alert">Cargando...</div>
+<div *ngIf="loading" class="alert alert-primary" role="alert">Cargando...</div>
 
 <div *ngIf="error" class="alert alert-primary" role="alert">
   {{ error.message }}
 </div>
 
-<div *ngIf="!cargando" class="row row-cols-1 row-cols-md-3 g-4">
+<div *ngIf="!loading" class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col" *ngFor="let usuario of usuarios">
     <div class="card h-100">
       <img [src]="usuario.avatar" class="card-img-top" alt="foto de usuario" />
